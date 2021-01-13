@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Task process page - Last save point
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            Manage tasks
+          </span>
+        </span>
+      </a>
+      <br>
+      <br>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="/my-tasks/task-list">
+              My tasks
+            </a>
+          </li>
+        <li class="govuk-header__navigation-item ">
+            <a class="govuk-header__link" href="/my-tasks/statistics/statistics">
+              My clearances
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+
+</header>
+{% endblock %}
+
+
+
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="verify-non-employment">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Task page
+      </h1>
+
+      <p>This shows the last saved page in the task completion process. <br><br> For example, this may be 'Bank or building society details' page in 'Start a paper claim' task.  </p>
+      <br>
+      <p><strong>End of an task</strong><br> You may be directed to an 'end this task' page once the task is completed.
+
+      <br>
+      <br>
+
+      <a href="/my-tasks/task-list">Go to tasks page </a></p>
+    </div>
+  </div>
+
+{% endblock %}

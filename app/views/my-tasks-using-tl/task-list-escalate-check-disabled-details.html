@@ -1,0 +1,226 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+  Manage tasks
+{% endblock %}
+
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            Manage tasks
+          </span>
+        </span>
+      </a>
+      <br>
+      <br>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="/my-tasks-using-tl/task-list">
+              My tasks
+            </a>
+          </li>
+
+          <li class="govuk-header__navigation-item ">
+            <a class="govuk-header__link" href="/my-tasks-using-tl/statistics/statistics">
+              My clearances
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+
+</header>
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<!-- Banner - Start -->
+<div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">
+      Task has been escalated and removed from your list
+    </p>
+    <p class="govuk-body">Reason: {{ data['more-detail'] | default('No reason provided') }}</p>
+  </div>
+</div>
+
+<!-- Banner - End -->
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds" style="width:65%;">
+    <h1 class="govuk-heading-xl">
+      My tasks
+    </h1>
+  </div>
+  <div class="govuk-grid-column-one-thirds" >
+  <a href="add-new-tasks"><button class="govuk-button govuk-!-margin-left-9 " data-module="govuk-button" > Add new tasks to my to-do list </button></a>
+</div>
+</div>
+
+
+<div class="govuk-grid-row">
+
+
+    <div class="govuk-grid-column-full">
+      <br><br>
+
+      <!-- Table to hold list of tasks -->
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-half" style="width:55% !important;">Task</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:15% !important;">Priority</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:15% !important;">Due date</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:16% !important;">Status</th>
+
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="#">Check claim details </a></td>
+            <td class="govuk-table__cell">Very high</td>
+            <td class="govuk-table__cell">10-01-2021</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Not started</strong></td>
+
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="/my-tasks-using-tl/claim-details/check-claim-details">Update ceased to care details </a></td>
+            <td class="govuk-table__cell">Low</td>
+            <td class="govuk-table__cell">12-01-2021</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Not started</strong></td>
+
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="/my-tasks-using-tl/in-progress/verify-non-employment">Check non-employment income</a></td>
+            <td class="govuk-table__cell">Low</td>
+            <td class="govuk-table__cell">13-01-2021</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
+
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="/my-tasks-using-tl/address-verify/verify-addresses">Update dependent qualifying benefits</a></td>
+            <td class="govuk-table__cell">Very high</td>
+            <td class="govuk-table__cell">13-01-2021</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Not started</strong></td>
+
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="#">Update dependent detatils</a></td>
+            <td class="govuk-table__cell">Low</td>
+            <td class="govuk-table__cell">14-01-2021</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Not started</strong></td>
+
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="#">Update employment status</a></td>
+            <td class="govuk-table__cell">High</td>
+            <td class="govuk-table__cell">14-01-2021</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Not started</strong></td>
+
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="/my-tasks-using-tl/add-payment/add-payment">Add payment details</a></td>
+            <td class="govuk-table__cell">Medium</td>
+            <td class="govuk-table__cell">15-01-2021</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Not started</strong></td>
+
+
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="#">Update ceased to care details</a></td>
+            <td class="govuk-table__cell">Medium</td>
+            <td class="govuk-table__cell">15-01-2021</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Not started</strong></td>
+
+
+
+          </tr>
+
+        </tbody>
+      </table>
+      <!-- Table to hold list of tasks -- END -->
+    <br>
+    <br>
+    <h2 class="govuk-heading-m" id="subsection-title">
+      Assigned by me
+      <label class="govuk-hint" for="more-detail">
+        Tasks being followed
+      </label>
+    </h2>
+
+    <!-- Table to hold list of tasks -->
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half" style="width:55% !important;">Task</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:31% !important;">Assigned to</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:15% !important;">Status</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Check claim evidence </a></td>
+          <td class="govuk-table__cell">Mary M</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <!-- <th scope="row" class="govuk-table__header">Total estimated pay</th> -->
+          <td class="govuk-table__cell"><a href="#">Add payment details</a></td>
+          <td class="govuk-table__cell">Mathew Philip</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Completed</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Update ceased to care details</a></td>
+          <td class="govuk-table__cell">James May</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Check disabled person's details and appointee</a></td>
+          <td class="govuk-table__cell">Andrew Smith</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Completed</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Check address</a></td>
+          <td class="govuk-table__cell">James May</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Completed</strong></td>
+        </tr>
+
+
+      </tbody>
+    </table>
+      <!-- Table to hold list of tasks -- END -->
+    <br>
+    </div>
+
+  </div>       <!-- End of main row -->
+
+
+{% endblock %}

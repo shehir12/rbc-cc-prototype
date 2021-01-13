@@ -1,0 +1,156 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirm escalation details
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            Manage tasks
+          </span>
+        </span>
+      </a>
+      <br>
+      <br>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="/my-tasks/task-list">
+              My tasks
+            </a>
+          </li>
+
+          <li class="govuk-header__navigation-item ">
+            <a class="govuk-header__link" href="/my-tasks/statistics/statistics">
+              My clearances
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+
+</header>
+{% endblock %}
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="bluezone-process">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers before adding payment details</h1>
+<br>
+      <h2 class="govuk-heading-m">Payment details</h2>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name of the account holder
+          </dt>
+          <dd class="govuk-summary-list__value">{{data['name-on-the-account'] }}</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="bluezone-process">
+              Change
+              <span class="govuk-visually-hidden">account type</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Full name of bank or building society
+          </dt>
+          <dd class="govuk-summary-list__value">{{ data['account-name'] }}</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="bluezone-process">
+              Change
+              <span class="govuk-visually-hidden">name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Sort code
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['sort-code'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="bluezone-process">
+              Change
+              <span class="govuk-visually-hidden">sort code</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Account number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['account-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="bluezone-process">
+              Change
+              <span class="govuk-visually-hidden">account number</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Building society roll or reference number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['roll-number'] | default('Not applicable') }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="bluezone-process">
+              Change
+              <span class="govuk-visually-hidden">Building society roll number</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+      </dl>
+      <br>
+
+
+      <form action="/my-tasks/task-list-confirm-add-payment" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+        <br><br>
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and add new payment details
+        </button>
+        <br>      <br>
+        <p class="govuk-heading-s">Other actions</p>
+        <p>
+          <a href="pause-this-task">Park task</a>
+        </p>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,161 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Add new tasks
+{% endblock %}
+
+
+{% block pageScripts %}
+  <script type="text/javascript">
+    function validateForm() {
+      var x = document.forms["no-of-tasks-form"]["no-of-tasks"].value;
+      var y = document.getElementById("error-summary");
+
+      var reason_error = document.getElementById("no-reason-error");
+
+      if (x == "") {
+        y.style.display="block";
+        reason_error.style.display="block";
+        $("#reason-options").addClass("govuk-form-group--error");
+        return false;
+      }
+    }
+
+  </script>
+
+{% endblock %}
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            Manage tasks
+          </span>
+        </span>
+      </a>
+      <br>
+      <br>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="/my-tasks-using-tl/task-list">
+              My tasks
+            </a>
+          </li>
+
+          <li class="govuk-header__navigation-item ">
+            <a class="govuk-header__link" href="/my-tasks-using-tl/statistics/statistics">
+              My clearances
+            </a>
+          </li>
+
+
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="task-list">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Error Summary - Start -->
+<div class="govuk-error-summary govuk-radios__conditional--hidden" id="error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary" >
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#no-reason-error">Select number of tasks you want to add </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- Error Summary - End -->
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">How many new tasks do you want to add to your task list?</h1>
+      <form class="form" name="no-of-tasks-form" action="task-list-new-tasks-added" onsubmit="return validateForm()" method="post">
+
+      <div class="govuk-form-group" id="reason-options">
+
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <div id="contact-hint" class="govuk-hint">
+            Select one option.
+          </div>
+
+      <!-- Error block  start-->
+
+      <span id="no-reason-error" class="govuk-error-message govuk-radios__conditional--hidden">
+          <span class="govuk-visually-hidden">Error:</span> Select number of tasks you want to add
+      </span>
+
+      <!-- Error block  end-->
+
+
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="no-of-tasks-1" name="no-of-tasks" type="radio" value="1" data-aria-controls="no-of-tasks-option-1">
+              <label class="govuk-label govuk-radios__label" for="no-of-tasks-1">
+                1
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="no-of-tasks-2" name="no-of-tasks" type="radio" value="3" data-aria-controls="rno-of-tasks-option-2">
+              <label class="govuk-label govuk-radios__label" for="no-of-tasks-2">
+                3
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="no-of-tasks-3" name="no-of-tasks" type="radio" value="5" data-aria-controls="no-of-tasks-option-3">
+              <label class="govuk-label govuk-radios__label" for="no-of-tasks-3">
+                5
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="no-of-tasks-4" name="no-of-tasks" type="radio" value="10" data-aria-controls="no-of-tasks-option-3">
+              <label class="govuk-label govuk-radios__label" for="no-of-tasks-4">
+                10
+              </label>
+            </div>
+
+
+
+        </fieldset>
+      </div>
+
+
+      <button class="govuk-button" data-module="govuk-button">Confirm and add</button>
+
+      </form>
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

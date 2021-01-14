@@ -52,13 +52,13 @@
       <nav>
         <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
           <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
-            <a class="govuk-header__link" href="/my-tasks-using-tl/task-list">
+            <a class="govuk-header__link" href="/my-tasks/task-list">
               My tasks
             </a>
           </li>
 
           <li class="govuk-header__navigation-item ">
-            <a class="govuk-header__link" href="/my-tasks-using-tl/statistics/statistics">
+            <a class="govuk-header__link" href="/my-tasks/statistics/statistics">
               My clearances
             </a>
           </li>
@@ -74,7 +74,7 @@
 
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/my-tasks-using-tl/claim-details/check-claim-details">Back</a>
+  <a class="govuk-back-link" href="/my-tasks/claim-details/check-claim-details">Back</a>
 {% endblock %}
 
 
@@ -87,7 +87,7 @@
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#no-reason-error">Select your reason for not doing this task</a>
+        <a href="#no-reason-error">Select an option</a>
       </li>
     </ul>
   </div>
@@ -101,7 +101,7 @@
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#other-reason-required">Enter your reason for not doing this task</a>
+        <a href="#other-reason-required">Enter your notes</a>
       </li>
     </ul>
   </div>
@@ -109,86 +109,85 @@
 
 
 
-<details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Task information
-    </span>
-  </summary>
-  <!-- Task information - start -->
-
-
-  <dl class="govuk-summary-list">
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        Task
-      </dt>
-      <dd class="govuk-summary-list__value">
-        Update ceased to care details
-      </dd>
-
-    </div>
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        Status
-      </dt>
-      <dd class="govuk-summary-list__value">
-        <strong class="govuk-tag govuk-tag--yellow">
-          Not started
-        </strong>
-      </dd>
-
-    </div>
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        Case number
-      </dt>
-      <dd class="govuk-summary-list__value">
-        CC346697E
-      </dd>
-
-    </div>
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        Assigned by
-      </dt>
-      <dd class="govuk-summary-list__value">
-        Me
-      </dd>
-
-    </div>
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        Description
-      </dt>
-      <dd class="govuk-summary-list__value">
-        Perform a check and update ceased to care detials
-      </dd>
-
-    </div>
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        Priority
-      </dt>
-      <dd class="govuk-summary-list__value">
-        Very high
-      </dd>
-
-    </div>
-
-  </dl>
-
-  <!-- Task information - end -->
-</details>
-
-
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">I can't do this task</h1>
+      <h1 class="govuk-heading-xl">Update ceased to care details</h1>
 
-      <form class="form " name="reason-form-2" action="/my-tasks-using-tl/task-list-no-claim-details" onsubmit="return validateForm()" method="post">
+</div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key" style="width:60%;">
+      Name of the person being cared for
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Morris Watsica
+    </dd>
+
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Do they have a National Insurance number?
+    </dt>
+    <dd class="govuk-summary-list__value">
+        No
+    </dd>
+
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Date of birth
+    </dt>
+    <dd class="govuk-summary-list__value">
+      14 April 1971
+    </dd>
+
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Carer lives at the same address?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Yes
+    </dd>
+
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Started caring for the person (for 35 hours a week or more)
+    </dt>
+    <dd class="govuk-summary-list__value">
+      22 December 2020
+    </dd>
+
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Stopped caring for the person
+    </dt>
+    <dd class="govuk-summary-list__value">
+      11 January 2020
+    </dd>
+
+  </div>
+
+</dl>
+</div>
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <br><br>
+      <h2 class="govuk-heading-m">Case options</h2>
+
+
+      <form class="form " name="reason-form-2" action="bluezone-process" onsubmit="return validateForm()" method="post">
 
       <div class="govuk-form-group" id="reason-options-2">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -199,7 +198,7 @@
       <!-- Specific error block - Start -->
 
       <span id="no-reason-error-2" class="govuk-error-message govuk-radios__conditional--hidden">
-          <span class="govuk-visually-hidden">Error:</span> Select your reason for not doing this task
+          <span class="govuk-visually-hidden">Error:</span>Select an option
       </span>
 
       <!-- Specific error block - End -->
@@ -212,14 +211,14 @@
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="reason-1" name="reason-for-not-doing-task-2" type="radio" value="Not relevent to my skillset or training" data-aria-controls="reason-for-not-doing-task-1">
               <label class="govuk-label govuk-radios__label" for="reason-1">
-                Not relevent to my skillset or training
+                Add new care details
               </label>
             </div>
 
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="reason-2" name="reason-for-not-doing-task-2" type="radio" value="Task does not have enough details to asses it’s complexity" data-aria-controls="reason-for-not-doing-task-2">
               <label class="govuk-label govuk-radios__label" for="reason-2">
-                Not enough information to assess complexity of task
+                Update care and payment details
               </label>
             </div>
 
@@ -233,18 +232,18 @@
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="reason-4" name="reason-for-not-doing-task-2" type="radio" value=" " data-aria-controls="reason-for-not-doing-task-4">
               <label class="govuk-label govuk-radios__label" for="reason-4">
-                Other reason
+                No action needed
               </label>
             </div>
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="reason-for-not-doing-task-4">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="reason-5">
-                  Enter your reason
+                  Notes
                 </label>
 
                 <!-- Field Error - Start -->
                 <span id="no-reason-error-2-2" class="govuk-error-message govuk-radios__conditional--hidden">
-                    <span class="govuk-visually-hidden">Error:</span>Enter your reason for not doing this task
+                    <span class="govuk-visually-hidden">Error:</span>Enter your notes
                 </span>
                 <!-- Field Error - End -->
 
@@ -259,6 +258,11 @@
 
 
       <button class="govuk-button" data-module="govuk-button">Continue</button>
+      <br><br>
+          <p class="govuk-heading-s">Other actions</p>
+          <p>
+            <a href="pause-this-task">Park task</a>
+          </p>
 
       </form>
 

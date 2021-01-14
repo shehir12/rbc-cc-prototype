@@ -23,14 +23,14 @@
       <nav>
         <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
           <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
-            <a class="govuk-header__link" href="/my-tasks/task-list">
+            <a class="govuk-header__link" href="/my-tasks-using-tl/task-list">
               My tasks
             </a>
           </li>
 
           <li class="govuk-header__navigation-item ">
-            <a class="govuk-header__link" href="/my-tasks/statistics/statistics">
-              My clearances
+            <a class="govuk-header__link" href="/my-tasks-using-tl/statistics/statistics">
+              My clearnaces
             </a>
           </li>
 
@@ -46,8 +46,9 @@
 
 
 
+
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/my-tasks/task-list">Back</a>
+  <a class="govuk-back-link" href="check-claim-details">Back</a>
 {% endblock %}
 
 
@@ -63,74 +64,48 @@
       </h1>
 
       <p></p>
-
-      <dl class="govuk-summary-list">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Status
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <strong class="govuk-tag govuk-tag--grey">
-              To-do
-            </strong>
-          </dd>
-
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Case number
-          </dt>
-          <dd class="govuk-summary-list__value">
-            CC346697E
-          </dd>
-
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Assigned by
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Me
-          </dd>
-
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Description
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Perform a check and update ceased to care detials
-          </dd>
-
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Priority
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Very high
-          </dd>
-
-        </div>
-
-      </dl>
-
-      <br>
-      <a href="bluezone-process-1"><button class="govuk-button" data-module="govuk-button">Start task </button></a>
-
-      <br>      <br>
-
-      <p><a href="i-cannot-do-this-task-2">I can't do this task</a></p>
-    </div>
-
-    <!--  Task history </p> -->
-
-    <div class="govuk-grid-column-one-third">
-
-          <h2 class="govuk-heading-m" id="subsection-title">
-            Task history
-          </h2>
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Complete task history
+      </h2>
       <ol style="list-style: none; padding-left:0px;" class="dwp-timeline" class="govuk-list govuk-!-font-size-16">
+
+        <li class="dwp-timeline__entry">
+          <h3 class="govuk-heading-s">Started</h3>
+          <p class="dwp-timeline__info">
+            <span class="dwp-visually__hidden">Task saved</span>
+            <span class="dwp-timeline__date">3 January 2021 at 07:35</span>
+          </p>
+        </li>
+
+        <li class="dwp-timeline__entry">
+          <h3 class="govuk-heading-s">Parked </h3>
+          <p class="dwp-timeline__info">
+            <span class="dwp-visually__hidden">Task parked</span>
+            <span class="dwp-timeline__author">by Andrew R</span>
+            <span class="dwp-timeline__date">3 January 2021 at 07:31</span>
+          </p>
+        </li>
+
+        <li class="dwp-timeline__entry">
+          <h3 class="govuk-heading-s">Referred</h3>
+          <p class="dwp-timeline__info">
+            <span class="dwp-visually__hidden">Task referred</span>
+            <span class="dwp-timeline__author">by Mike H to Jason S</span>
+            <span class="dwp-timeline__date">2 January 2021 at 08:21</span>
+          </p>
+
+        </li>
+
+        <li class="dwp-timeline__entry">
+          <h3 class="govuk-heading-s">Referred</h3>
+          <p class="dwp-timeline__info">
+            <span class="dwp-timeline__author">by Mike H</span>
+            <span class="dwp-timeline__date">2 January 2021 at 07:21</span>
+          </p>
+        </li>
+
+
+
         <li class="dwp-timeline__entry">
           <h3 class="govuk-heading-s">Started</h3>
           <p class="dwp-timeline__info">
@@ -151,12 +126,15 @@
             Returned to system queue due to inactivity or no status update
           </p>
         </li>
+
       </ol>
 
-      <p><a href="check-claim-details-history">View complete history</a></p>
+      <br>
+      <br>
+      <a href="check-claim-details"><button class="govuk-button" data-module="govuk-button" >Back to the task </button></a>
 
+      <br>      <br>
 
-    </div>
 
   </div>
 

@@ -125,10 +125,10 @@
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#more-notes-text">Enter notes for this task</a>
+        <a href="#more-notes-text">Enter notes</a>
       </li>
       <li>
-        <a href="#more-details">Enter reason for not doing this task</a>
+        <a href="#more-details">Enter reason for referring task</a>
       </li>
     </ul>
   </div>
@@ -143,7 +143,7 @@
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#more-notes-text">Enter notes for this task</a>
+        <a href="#more-notes-text">Enter notes</a>
       </li>
 
     </ul>
@@ -159,7 +159,7 @@
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#more-details">Enter reason for not doing this task</a>
+        <a href="#more-details">Enter reason for referring task</a>
       </li>
 
     </ul>
@@ -252,14 +252,14 @@
 
       <br>
       <br>
-      <h2 class="govuk-heading-m">Select reference level, priority and add notes</h2>
+      <h2 class="govuk-heading-m">Select role, priority and add notes</h2>
 
       <form class="form" name="reason-for-escalate" action="escalate-confirm-answers" onsubmit="return validateForm()" method="post">
 
         <div class="govuk-form-group">
 
         <label class="govuk-label" for="escalate-level">
-          Select decision maker or team leader
+          Select role
         </label>
 
         <!-- Field Error - Start -->
@@ -269,8 +269,8 @@
         <!-- Field Error - End -->
 
         <select id="escalate-level-select" class="govuk-select" name="escalate-level" value="" >
-          <option value="Decision maker - Agent" >Decision maker</option>
-          <option value="Decision maker - Team leader" >Team leader</option>
+          <option value="Team leader" >Team leader</option>
+          <option value="Decision maker" >Decision maker</option>
         </select>
         </div>
 
@@ -299,12 +299,12 @@
       <!-- Notes -->
       <div class="govuk-form-group" id="more-notes-section">
         <label class="govuk-label" for="escalate-notes">
-          Add notes
+          Enter notes
         </label>
 
         <!-- Field Error - Start -->
         <span id="more-notes-text" class="govuk-error-message govuk-radios__conditional--hidden">
-            <span class="govuk-visually-hidden">Error:</span>Enter notes for this task
+            <span class="govuk-visually-hidden">Error:</span>Enter notes
         </span>
         <!-- Field Error - End -->
 
@@ -316,12 +316,12 @@
       <div class="govuk-form-group" id="more-details">
 
         <label class="govuk-label" for="more-detail">
-          Enter why you want to refer this task
+          Enter reason for referring task
         </label>
 
         <!-- Field Error - Start -->
         <span id="reason-to-escalate-text" class="govuk-error-message govuk-radios__conditional--hidden">
-            <span class="govuk-visually-hidden">Error:</span>Enter reason for not doing task
+            <span class="govuk-visually-hidden">Error:</span>Enter reason for referring task
         </span>
         <!-- Field Error - End -->
 
@@ -330,7 +330,7 @@
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-checkboxes__label" for="contact">
-          Add to 'Assigned by me' list to follow progress of task.
+          Add task to 'Assigned by me' list to follow progress
         </label>
       </div>
 

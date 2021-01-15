@@ -240,7 +240,7 @@
             Priority
           </dt>
           <dd class="govuk-summary-list__value">
-            Very High
+            Very high
           </dd>
 
         </div>
@@ -252,14 +252,14 @@
 
       <br>
       <br>
-      <h2 class="govuk-heading-m">Select referance level, priority and add notes</h2>
+      <h2 class="govuk-heading-m">Select role, priority and add notes</h2>
 
       <form class="form" name="reason-for-escalate" action="escalate-confirm-answers" onsubmit="return validateForm()" method="post">
 
         <div class="govuk-form-group">
 
         <label class="govuk-label" for="escalate-level">
-          Select the level
+          Select role
         </label>
 
         <!-- Field Error - Start -->
@@ -269,9 +269,8 @@
         <!-- Field Error - End -->
 
         <select id="escalate-level-select" class="govuk-select" name="escalate-level" value="" >
-          <option value="Agent- Team leader" selected>Agent- Team leader</option>
-          <option value="Decision maker - Agent" >Decision maker - Agent</option>
-          <option value="Decision maker - Team leader" >Decision maker - Team leader</option>
+          <option value="Team leader" selected>Team leader</option>
+          <option value="Decision maker" >Decision maker</option>
         </select>
         </div>
 
@@ -300,7 +299,7 @@
       <!-- Notes -->
       <div class="govuk-form-group" id="more-notes-section">
         <label class="govuk-label" for="escalate-notes">
-          Notes
+          Enter notes
         </label>
 
         <!-- Field Error - Start -->
@@ -317,12 +316,12 @@
       <div class="govuk-form-group" id="more-details">
 
         <label class="govuk-label" for="more-detail">
-          Enter the reason why you want to refer this task
+          Enter reason why you want to refer  task
         </label>
 
         <!-- Field Error - Start -->
         <span id="reason-to-escalate-text" class="govuk-error-message govuk-radios__conditional--hidden">
-            <span class="govuk-visually-hidden">Error:</span>Enter your reason for not doing this task
+            <span class="govuk-visually-hidden">Error:</span>Enter reason for not doing this task
         </span>
         <!-- Field Error - End -->
 

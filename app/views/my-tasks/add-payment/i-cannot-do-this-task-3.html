@@ -199,40 +199,39 @@
 
 
 
-          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="reason-1" name="reason-for-not-doing-task-3" type="radio" value="Not relevent to my skillset or training" data-aria-controls="reason-for-not-doing-task-1">
-              <label class="govuk-label govuk-radios__label" for="reason-1">
-                Not relevent to my skillset or training
-              </label>
-            </div>
+      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reason-1" name="reason-for-not-doing-task-3" type="radio" value="I don't have relevant experience or training" data-aria-controls="reason-for-not-doing-task-1">
+          <label class="govuk-label govuk-radios__label" for="reason-1">
+            I don't have relevant experience or training
+          </label>
+        </div>
 
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="reason-2" name="reason-for-not-doing-task-3" type="radio" value="Task does not have enough details to asses it’s complexity" data-aria-controls="reason-for-not-doing-task-2">
-              <label class="govuk-label govuk-radios__label" for="reason-2">
-                Not enough information to assess complexity of task
-              </label>
-            </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reason-2" name="reason-for-not-doing-task-3" type="radio" value="I don't have enough information to assess complexity of task" data-aria-controls="reason-for-not-doing-task-2">
+          <label class="govuk-label govuk-radios__label" for="reason-2">
+            I don't have enough information to assess complexity of task
+          </label>
+        </div>
 
 
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reason-4" name="reason-for-not-doing-task-3" type="radio" value=" " data-aria-controls="reason-for-not-doing-task-4">
+          <label class="govuk-label govuk-radios__label" for="reason-4">
+            Other reason
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="reason-for-not-doing-task-4">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="reason-5">
+              Enter reason
+            </label>
 
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="reason-4" name="reason-for-not-doing-task-3" type="radio" value=" " data-aria-controls="reason-for-not-doing-task-4">
-              <label class="govuk-label govuk-radios__label" for="reason-4">
-                Other reason
-              </label>
-            </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="reason-for-not-doing-task-4">
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="reason-5">
-                  Enter your reason
-                </label>
-
-                <!-- Field Error - Start -->
-                <span id="no-reason-error-2-2" class="govuk-error-message govuk-radios__conditional--hidden">
-                    <span class="govuk-visually-hidden">Error:</span>Enter reason for not doing task
-                </span>
-                <!-- Field Error - End -->
+            <!-- Field Error - Start -->
+            <span id="no-reason-error-2-2" class="govuk-error-message govuk-radios__conditional--hidden">
+                <span class="govuk-visually-hidden">Error:</span>Enter reason for not doing task
+            </span>
+            <!-- Field Error - End -->
 
 
                 <textarea class="govuk-textarea" id="other-reason-required-2" name="reason-for-not-doing-task-3" rows="5" aria-describedby="more-detail-hint"></textarea>

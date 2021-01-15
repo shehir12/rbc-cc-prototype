@@ -121,12 +121,12 @@
       <br>
       <br>
 
-      <h2 class="govuk-heading-m">Escalation information</h2>
+      <h2 class="govuk-heading-m">Reference information</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Escalation level
+            Role
           </dt>
           <dd class="govuk-summary-list__value">
           {{ data['escalate-level'] | default('Agent - Team leader') }}
@@ -134,7 +134,7 @@
           <dd class="govuk-summary-list__actions">
             <a href="escalate-this-task">
               Change
-              <span class="govuk-visually-hidden"> escalation level</span>
+              <span class="govuk-visually-hidden"> Role </span>
             </a>
           </dd>
         </div>
@@ -170,7 +170,7 @@
       </dl>
       <br>
       <br>
-      <h2 class="govuk-heading-m">Why you want to escalate this task?</h2>
+      <h2 class="govuk-heading-m">Reason for referring task</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
@@ -195,7 +195,7 @@
         <input type="hidden" name="answers-checked" value="true">
 
         <button type="submit" class="govuk-button" data-module="govuk-button">
-          Escalate  task
+          Refer task
         </button>
 
       </form>

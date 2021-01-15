@@ -118,156 +118,27 @@
 </div>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
 
 
-    <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key" style="width:60%;">
-          Name of person being cared for
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Morris Watsica
-        </dd>
+       <p class="govuk-caption-l">Relevant description of task appears here</p>
 
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Do they have a National Insurance number?
-        </dt>
-        <dd class="govuk-summary-list__value">
-            No
-        </dd>
-
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Date of birth of the person cared for
-        </dt>
-        <dd class="govuk-summary-list__value">
-          14 April 1971
-        </dd>
-
-      </div>
-      <br><br>
-       <p class="govuk-heading-m">Carer information</p>
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Carer lives at same address?
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Yes
-        </dd>
-
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Started caring for person (for 35 hours a week or more)
-        </dt>
-        <dd class="govuk-summary-list__value">
-          22 December 2020
-        </dd>
-
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Stopped caring for the person
-        </dt>
-        <dd class="govuk-summary-list__value">
-          11 January 2020
-        </dd>
-
-      </div>
-
-    </dl>
-</div>
-</div>
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <br><br>
-      <h2 class="govuk-heading-m">Case options</h2>
+      <br><br><br>
+      <p>
 
 
-      <form class="form " name="reason-form-2" action="bluezone-process" onsubmit="return validateForm()" method="post">
+    <strong>Task journey and completion</strong><br>
+    </p><p>
+    You may be directed to an existing sytem to finish the task journey and may be directed to 'end this task' page once the task is completed. </p>
 
-      <div class="govuk-form-group" id="reason-options-2">
-        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-          <div id="contact-hint" class="govuk-hint">
-            Select one option.
-          </div>
+    <br><br>
 
-      <!-- Specific error block - Start -->
-
-      <span id="no-reason-error-2" class="govuk-error-message govuk-radios__conditional--hidden">
-          <span class="govuk-visually-hidden">Error:</span>Select an option
-      </span>
-
-      <!-- Specific error block - End -->
-
-
-
-
-
-          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="reason-1" name="reason-for-not-doing-task-2" type="radio" value="Not relevent to my skillset or training" data-aria-controls="reason-for-not-doing-task-1">
-              <label class="govuk-label govuk-radios__label" for="reason-1">
-                Add new care details
-              </label>
-            </div>
-
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="reason-2" name="reason-for-not-doing-task-2" type="radio" value="Task does not have enough details to asses it’s complexity" data-aria-controls="reason-for-not-doing-task-2">
-              <label class="govuk-label govuk-radios__label" for="reason-2">
-                Update care and payment details
-              </label>
-            </div>
-
-            <!-- <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="reason-3" name="reason-for-not-doing-task-2" type="radio" value="Too complex to be finished in a work-day" data-aria-controls="reason-for-not-doing-task-3">
-              <label class="govuk-label govuk-radios__label" for=reason-3">
-                Too complex to be finished in a working day
-              </label>
-            </div> -->
-
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="reason-4" name="reason-for-not-doing-task-2" type="radio" value=" " data-aria-controls="reason-for-not-doing-task-4">
-              <label class="govuk-label govuk-radios__label" for="reason-4">
-                No action needed
-              </label>
-            </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="reason-for-not-doing-task-4">
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="reason-5">
-                  Notes
-                </label>
-
-                <!-- Field Error - Start -->
-                <span id="no-reason-error-2-2" class="govuk-error-message govuk-radios__conditional--hidden">
-                    <span class="govuk-visually-hidden">Error:</span>Enter your notes
-                </span>
-                <!-- Field Error - End -->
-
-
-                <textarea class="govuk-textarea" id="other-reason-required-2" name="reason-for-not-doing-task-2" rows="5" aria-describedby="more-detail-hint"></textarea>
-
-            </div>
-          </div>
-
-        </fieldset>
-      </div>
-
-
-      <button class="govuk-button" data-module="govuk-button">Continue</button>
-      <br><br>
-          <p class="govuk-heading-s">Other actions</p>
-          <p>
-            <a href="pause-this-task">Park task</a>
-          </p>
-
-      </form>
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+          <br><br>
+              <p class="govuk-heading-s">Other actions</p>
+              <p>
+                <a href="pause-this-task">Park task</a>
+              </p>
 
 
 

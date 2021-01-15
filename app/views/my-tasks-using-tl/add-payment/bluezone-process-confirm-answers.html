@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Confirm escalation details
+  Confirm details
 {% endblock %}
 
 {% block header %}
@@ -22,13 +22,13 @@
       <nav>
         <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
           <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
-            <a class="govuk-header__link" href="/my-tasks/task-list">
+            <a class="govuk-header__link" href="/my-tasks-using-tl/task-list">
               My tasks
             </a>
           </li>
 
           <li class="govuk-header__navigation-item ">
-            <a class="govuk-header__link" href="/my-tasks/statistics/statistics">
+            <a class="govuk-header__link" href="/my-tasks-using-tl/statistics/statistics">
               My clearances
             </a>
           </li>
@@ -74,7 +74,7 @@
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Full name of bank or building society
+            Name of bank or building society
           </dt>
           <dd class="govuk-summary-list__value">{{ data['account-name'] }}</dd>
           <dd class="govuk-summary-list__actions">
@@ -136,7 +136,7 @@
       <br>
 
 
-      <form action="/my-tasks/task-list-confirm-add-payment" method="post" novalidate>
+      <form action="/my-tasks-using-tl/task-list-confirm-add-payment" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
         <br><br>

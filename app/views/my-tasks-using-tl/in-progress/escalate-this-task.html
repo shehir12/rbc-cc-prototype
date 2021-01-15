@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Refer task to a decision maker or team leader
+  Refer task
 {% endblock %}
 
 {% block pageScripts %}
@@ -125,10 +125,10 @@ Refer task to a decision maker or team leader
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#more-notes-text">Enter your notes for this task</a>
+        <a href="#more-notes-text">Enter notes</a>
       </li>
       <li>
-        <a href="#more-details">Enter your reason for not doing this task</a>
+        <a href="#more-details">Enter reason for referring task</a>
       </li>
     </ul>
   </div>
@@ -143,7 +143,7 @@ Refer task to a decision maker or team leader
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#more-notes-text">Enter your notes for this task</a>
+        <a href="#more-notes-text">Enter notes</a>
       </li>
 
     </ul>
@@ -159,7 +159,7 @@ Refer task to a decision maker or team leader
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#more-details">Enter your reason for not doing this task</a>
+        <a href="#more-details">Enter reason for referring task</a>
       </li>
 
     </ul>
@@ -178,7 +178,7 @@ Refer task to a decision maker or team leader
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Refer task to decision maker or team leader
+        Refer to a decision maker or team leader
       </h1>
 
 
@@ -240,7 +240,7 @@ Refer task to a decision maker or team leader
             Priority
           </dt>
           <dd class="govuk-summary-list__value">
-            Very High
+            Very high
           </dd>
 
         </div>
@@ -252,14 +252,14 @@ Refer task to a decision maker or team leader
 
       <br>
       <br>
-      <h2 class="govuk-heading-m">Select referance level, priority and add notes</h2>
+      <h2 class="govuk-heading-m">Select role, priority and add notes</h2>
 
       <form class="form" name="reason-for-escalate" action="escalate-confirm-answers" onsubmit="return validateForm()" method="post">
 
         <div class="govuk-form-group">
 
         <label class="govuk-label" for="escalate-level">
-          Select the level
+          Select role
         </label>
 
         <!-- Field Error - Start -->
@@ -269,9 +269,8 @@ Refer task to a decision maker or team leader
         <!-- Field Error - End -->
 
         <select id="escalate-level-select" class="govuk-select" name="escalate-level" value="" >
-          <option value="Agent- Team leader" selected>Agent- Team leader</option>
-          <option value="Decision maker - Agent" >Decision maker - Agent</option>
-          <option value="Decision maker - Team leader" >Decision maker - Team leader</option>
+          <option value="Team leader" selected>Team leader</option>
+          <option value="Decision maker" >Decision maker</option>
         </select>
         </div>
 
@@ -300,12 +299,12 @@ Refer task to a decision maker or team leader
       <!-- Notes -->
       <div class="govuk-form-group" id="more-notes-section">
         <label class="govuk-label" for="escalate-notes">
-          Notes
+          Enter notes
         </label>
 
         <!-- Field Error - Start -->
         <span id="more-notes-text" class="govuk-error-message govuk-radios__conditional--hidden">
-            <span class="govuk-visually-hidden">Error:</span>Enter your notes for this task
+            <span class="govuk-visually-hidden">Error:</span>Enter notes
         </span>
         <!-- Field Error - End -->
 
@@ -317,12 +316,12 @@ Refer task to a decision maker or team leader
       <div class="govuk-form-group" id="more-details">
 
         <label class="govuk-label" for="more-detail">
-          Enter the reason why you want to refer this task
+          Enter reason for referring task
         </label>
 
         <!-- Field Error - Start -->
         <span id="reason-to-escalate-text" class="govuk-error-message govuk-radios__conditional--hidden">
-            <span class="govuk-visually-hidden">Error:</span>Enter your reason for not doing this task
+            <span class="govuk-visually-hidden">Error:</span>Enter reason for referring task
         </span>
         <!-- Field Error - End -->
 
@@ -331,7 +330,7 @@ Refer task to a decision maker or team leader
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-checkboxes__label" for="contact">
-          Add to 'Assigned by me' to follow this task's progress.
+          Add task to 'Assigned by me' list to follow progress
         </label>
       </div>
 

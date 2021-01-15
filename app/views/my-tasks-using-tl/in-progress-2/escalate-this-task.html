@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Refer task to a decision maker or team leader
+  Refer task
 {% endblock %}
 
 {% block pageScripts %}
@@ -125,10 +125,10 @@
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#more-notes-text">Enter your notes for this task</a>
+        <a href="#more-notes-text">Enter notes</a>
       </li>
       <li>
-        <a href="#more-details">Enter your reason for not doing this task</a>
+        <a href="#more-details">Enter reason for referring task</a>
       </li>
     </ul>
   </div>
@@ -143,7 +143,7 @@
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#more-notes-text">Enter your notes for this task</a>
+        <a href="#more-notes-text">Enter notes</a>
       </li>
 
     </ul>
@@ -159,7 +159,7 @@
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#more-details">Enter your reason for not doing this task</a>
+        <a href="#more-details">Enter reason for referring task</a>
       </li>
 
     </ul>
@@ -178,7 +178,7 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Refer to a decision maker or team leader
+        Refer task to decision maker or team leader
       </h1>
 
 
@@ -222,7 +222,7 @@
             Case number
           </dt>
           <dd class="govuk-summary-list__value">
-            KR8738615R
+            KR873861R
           </dd>
 
         </div>
@@ -264,12 +264,12 @@
 
         <!-- Field Error - Start -->
         <span id="escalate-level-error" class="govuk-error-message govuk-radios__conditional--hidden">
-            <span class="govuk-visually-hidden">Error:</span>Enter your reason for not doing this task
+            <span class="govuk-visually-hidden">Error:</span>Enter reason for not doing task
         </span>
         <!-- Field Error - End -->
 
         <select id="escalate-level-select" class="govuk-select" name="escalate-level" value="" >
-          <option value="Team leader" selected>Team leader</option>
+          <option value="Team leader" >Team leader</option>
           <option value="Decision maker" >Decision maker</option>
         </select>
         </div>
@@ -283,7 +283,7 @@
 
         <!-- Field Error - Start -->
         <span id="priority-level" class="govuk-error-message govuk-radios__conditional--hidden">
-            <span class="govuk-visually-hidden">Error:</span>Enter your reason for not doing this task
+            <span class="govuk-visually-hidden">Error:</span>Enter reason for not doing task
         </span>
         <!-- Field Error - End -->
 
@@ -304,7 +304,7 @@
 
         <!-- Field Error - Start -->
         <span id="more-notes-text" class="govuk-error-message govuk-radios__conditional--hidden">
-            <span class="govuk-visually-hidden">Error:</span>Enter your notes for this task
+            <span class="govuk-visually-hidden">Error:</span>Enter notes
         </span>
         <!-- Field Error - End -->
 
@@ -316,12 +316,12 @@
       <div class="govuk-form-group" id="more-details">
 
         <label class="govuk-label" for="more-detail">
-          Enter reason why you want to refer  task
+          Enter reason for referring task
         </label>
 
         <!-- Field Error - Start -->
         <span id="reason-to-escalate-text" class="govuk-error-message govuk-radios__conditional--hidden">
-            <span class="govuk-visually-hidden">Error:</span>Enter reason for not doing this task
+            <span class="govuk-visually-hidden">Error:</span>Enter reason for referring task
         </span>
         <!-- Field Error - End -->
 
@@ -330,7 +330,7 @@
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-checkboxes__label" for="contact">
-          Add to 'Assigned by me' to follow this task's progress.
+          Add task to 'Assigned by me' list to follow progress
         </label>
       </div>
 

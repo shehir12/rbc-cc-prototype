@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  I can't do this task
+  Pause task
 {% endblock %}
 
 
@@ -87,7 +87,7 @@
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#no-reason-error">Select your reason for not doing this task</a>
+        <a href="#no-reason-error">Select reason for parking</a>
       </li>
     </ul>
   </div>
@@ -101,7 +101,7 @@
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#other-reason-required">Enter your reason for not doing this task</a>
+        <a href="#other-reason-required">Enter reason for parking task</a>
       </li>
     </ul>
   </div>
@@ -124,8 +124,8 @@
         Status
       </dt>
       <dd class="govuk-summary-list__value">
-        <strong class="govuk-tag govuk-tag--blue">
-          In progress
+        <strong class="govuk-tag govuk-tag--yellow">
+          Not started
         </strong>
       </dd>
 
@@ -135,7 +135,7 @@
         Case number
       </dt>
       <dd class="govuk-summary-list__value">
-        CA213121E
+        CA21312E
       </dd>
 
     </div>
@@ -153,7 +153,7 @@
         Description
       </dt>
       <dd class="govuk-summary-list__value">
-        Add new payment details to carer's account
+        Add new payment details to a claimant's account
       </dd>
 
     </div>
@@ -190,7 +190,7 @@
       <!-- Specific error block - Start -->
 
       <span id="no-reason-error-2" class="govuk-error-message govuk-radios__conditional--hidden">
-          <span class="govuk-visually-hidden">Error:</span> Select your reason for parking this task
+          <span class="govuk-visually-hidden">Error:</span> Select reason for parking task
       </span>
 
       <!-- Specific error block - End -->
@@ -221,12 +221,12 @@
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="pause-this-task">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="reason-5">
-                  Enter your reason
+                  Enter reason for parking
                 </label>
 
                 <!-- Field Error - Start -->
                 <span id="no-reason-error-2-2" class="govuk-error-message govuk-radios__conditional--hidden">
-                    <span class="govuk-visually-hidden">Error:</span>Enter your reason for parking this task
+                    <span class="govuk-visually-hidden">Error:</span>Enter reason for parking task
                 </span>
                 <!-- Field Error - End -->
 

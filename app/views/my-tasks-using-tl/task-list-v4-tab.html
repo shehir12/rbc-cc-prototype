@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+  Manage tasks
+{% endblock %}
+
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            Manage tasks
+          </span>
+        </span>
+      </a>
+      <br>
+      <br>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="/my-tasks-using-tl/task-list">
+              My tasks
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item ">
+            <a class="govuk-header__link" href="/my-tasks-using-tl/statistics/statistics">
+              My clearances
+            </a>
+          </li>
+
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+
+</header>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds" style="width:65%;">
+    <h1 class="govuk-heading-xl">
+      My tasks
+      <!-- <span class="govuk-body"><a href="/my-tasks-using-tl/task-list-alternative">Alternate option</a></span> -->
+    </h1>
+  </div>
+  <div class="govuk-grid-column-one-thirds" >
+  <a href="add-new-tasks"><button class="govuk-button govuk-!-margin-left-9 " data-module="govuk-button" > Add new tasks to my task list </button></a>
+</div>
+</div>
+
+
+<div class="govuk-grid-row">
+
+  <!-- Secondary Navigation Start-->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <nav class="navigation-secondary govuk-!-font-size-19">
+        <ul>
+          <li>
+            <a href="/my-tasks-using-tl/task-list-v4" aria-current="section">To-do</a>
+          </li>
+          <li>
+            <a href="/my-tasks-using-tl/task-list-v4-tab" class="active">Assigned by me</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- Secondary Navigation End-->
+
+  <div class="govuk-grid-column-full">
+    <br><br>
+    <h2 class="govuk-heading-m" id="subsection-title">
+      Assigned by me
+
+    </h2>
+
+    <!-- Table to hold list of tasks -->
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half" style="width:55% !important;">Task</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:31% !important;">Assigned to</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:15% !important;">Status</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Check claim evidence </a></td>
+          <td class="govuk-table__cell">Mary M</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <!-- <th scope="row" class="govuk-table__header">Total estimated pay</th> -->
+          <td class="govuk-table__cell"><a href="#">Add payment details</a></td>
+          <td class="govuk-table__cell">Mathew Philip</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Completed</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Update ceased to care details</a></td>
+          <td class="govuk-table__cell">James May</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Check disabled person's details and appointee</a></td>
+          <td class="govuk-table__cell">Andrew Smith</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Completed</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Check address</a></td>
+          <td class="govuk-table__cell">James May</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Completed</strong></td>
+        </tr>
+
+
+      </tbody>
+    </table>
+  <br>
+  <br>
+
+
+  </div>
+
+  </div>       <!-- End of main row -->
+
+
+
+{% endblock %}

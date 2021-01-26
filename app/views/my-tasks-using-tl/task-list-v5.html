@@ -1,0 +1,213 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+  Manage tasks
+{% endblock %}
+
+
+{% block header %}
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            Manage tasks
+          </span>
+        </span>
+      </a>
+      <br>
+      <br>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="/my-tasks-using-tl/task-list">
+              My tasks
+            </a>
+          </li>
+
+          <li class="govuk-header__navigation-item ">
+            <a class="govuk-header__link" href="/my-tasks-using-tl/statistics/statistics">
+              My clearances
+            </a>
+          </li>
+
+          <li class="govuk-header__navigation-item ">
+            <a class="govuk-header__link" href="#">
+              Tasks assigned by me
+            </a>
+          </li>
+
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+
+</header>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds" style="width:75%;">
+    <h1 class="govuk-heading-xl">
+      My tasks
+    </h1>
+  </div>
+
+</div>
+
+
+<div class="govuk-grid-row">
+
+
+  <div class="govuk-grid-column-full">
+    <br><br>
+    <h2 class="govuk-heading-m" id="subsection-title">
+      In progress
+      <label class="govuk-hint" for="more-detail">
+        Tasks parked and to be done
+      </label>
+
+    </h2>
+    <!-- Table to hold list of tasks -->
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half" style="width:45% !important;">Task</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:10% !important;">Parked on</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:15% !important;">Citizen Name</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:35% !important;">Reason for parking</th>
+
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Check claim details </a></td>
+          <td class="govuk-table__cell">02/01/2021</td>
+          <td class="govuk-table__cell">Mark M</td>
+          <td class="govuk-table__cell">Unknown CACS issue. Raised an issue ticket </td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Check disabled person's details and appointee</a></td>
+          <td class="govuk-table__cell">05/01/2021</td>
+          <td class="govuk-table__cell">James May</td>
+          <td class="govuk-table__cell">System error while adding details</td>
+
+
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Check non-employment income </a></td>
+          <td class="govuk-table__cell">12/02/2021</td>
+          <td class="govuk-table__cell">James May</td>
+          <td class="govuk-table__cell">Claimant did not answer phone</td>
+
+
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Check claim details</a></td>
+          <td class="govuk-table__cell">14/02/2021</td>
+
+          <td class="govuk-table__cell">Andy K</td>
+          <td class="govuk-table__cell">Claimant did not answer phone</td>
+
+
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">Check non-employment income</a></td>
+          <td class="govuk-table__cell">16/02/2021</td>
+
+          <td class="govuk-table__cell">Andrew Smith</td>
+          <td class="govuk-table__cell">I need to talk to another team member</td>
+
+
+        </tr>
+
+
+      </tbody>
+    </table>
+    <!-- Table to hold list of tasks -- END -->
+  <br>
+  <br>
+  <h2 class="govuk-heading-m" id="subsection-title">
+    Assigned to you
+    <label class="govuk-hint" for="more-detail">
+      Tasks assigned by a team member
+    </label>
+  </h2>
+  <!-- Table to hold list of tasks -->
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-half" style="width:55% !important;">Task</th>
+        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:15% !important;">Citizen Name</th>
+        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:15% !important;">Assigned by</th>
+        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:15% !important;">Assigned prority</th>
+
+
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="#">Check claim details </a></td>
+        <td class="govuk-table__cell">James May</td>
+        <td class="govuk-table__cell">Mark M</td>
+        <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Urgent</strong></td>
+
+
+      </tr>
+
+
+
+    </tbody>
+  </table>
+
+  <br><br>
+  <h2 class="govuk-heading-m" id="subsection-title">
+    To-do
+    <label class="govuk-hint" for="more-detail">
+      Next to-do task
+    </label>
+  </h2>
+  <!-- Table to hold list of tasks -->
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-half" style="width:55% !important;">Task</th>
+        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:15% !important;">Date</th>
+        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:15% !important;">Age(days)</th>
+        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:15% !important;">System prority</th>
+
+
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="#">Add payment details</a></td>
+        <td class="govuk-table__cell">12/02/2021</td>
+        <td class="govuk-table__cell">3</td>
+        <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Very high</strong></td>
+
+
+      </tr>
+
+
+
+    </tbody>
+  </table>
+
+  </div>
+
+
+</div>       <!-- End of main row -->
+
+
+
+{% endblock %}
